@@ -1,90 +1,67 @@
-# 🌳 Decision Tree Classifier Using Machine Learning
-
-### SkillCraft Technology – Data Science Internship | Task 3
-
-A Machine Learning classification project that implements a Decision Tree Classifier to make predictions based on input features. The project demonstrates supervised learning, data preprocessing, classification techniques and predictive modeling.
+# 🌳 Decision Tree Classifier – Bank Marketing Prediction
 
 ## 📌 Project Overview
 
-This project focuses on developing a Decision Tree Classification model using Machine Learning techniques.
+This project implements a **Decision Tree Classification Machine Learning Model** using the Bank Marketing Dataset from the UCI Machine Learning Repository. The model predicts whether a customer will subscribe to a bank's term deposit based on demographic, financial, and marketing campaign-related information.
 
-A Decision Tree is a supervised learning algorithm that makes predictions by learning decision rules from training data. It represents decisions in a tree-like structure consisting of root nodes, decision nodes, branches and leaf nodes.
+The project demonstrates data preprocessing, categorical encoding, model training, prediction, performance evaluation, and data visualization using Python and Scikit-learn.
 
-The primary objective is to understand how decision trees classify data and use learned patterns to predict the appropriate class for new observations.
+## 🎯 Objectives
 
-## 🎯 Project Objectives
+- Build a Decision Tree Classification model.
+- Analyze customer information and marketing campaign data.
+- Predict whether a customer will subscribe to a term deposit.
+- Evaluate model performance using classification metrics.
+- Identify important features influencing predictions.
+- Visualize the decision tree and confusion matrix.
 
-- Understand the fundamentals of Decision Tree algorithms.
-- Implement supervised Machine Learning classification.
-- Explore and preprocess structured datasets.
-- Train a classification model.
-- Understand decision-making through tree structures.
-- Generate predictions using trained models.
-- Evaluate classification performance.
+## 📊 Dataset
 
-## 🧠 Machine Learning Algorithm
+**Dataset:** Bank Marketing Dataset  
+**Source:** UCI Machine Learning Repository
 
-### Decision Tree Classifier
+The dataset contains customer information and details about direct marketing campaigns conducted by a Portuguese banking institution.
 
-A Decision Tree Classifier is a supervised Machine Learning algorithm used to predict categorical outcomes.
-
-It works by splitting the dataset into smaller subsets based on selected features until it reaches a final classification decision.
-
-### Important Components
-
-- **Root Node:** Represents the starting point of the decision tree.
-- **Decision Node:** Represents a condition or test on a feature.
-- **Branch:** Represents the outcome of a decision.
-- **Leaf Node:** Represents the final predicted class.
-- **Splitting:** Divides data based on selected criteria.
-- **Pruning:** Reduces unnecessary branches to control overfitting.
-
-### Splitting Criteria
-
-Common decision tree splitting techniques include:
-
-1. Gini Impurity
-2. Entropy
-3. Information Gain
-
-## ⚙️ Project Workflow
-
-1. Dataset Collection
-2. Data Loading
-3. Data Exploration
-4. Data Cleaning and Preprocessing
-5. Feature Selection
-6. Training and Testing Data Split
-7. Decision Tree Model Development
-8. Model Training
-9. Prediction Generation
-10. Model Evaluation
-
-## ✨ Key Features
-
-- Decision Tree classification.
-- Supervised Machine Learning implementation.
-- Dataset preprocessing.
-- Feature-based classification.
-- Predictive modeling.
-- Decision-making visualization.
-- Classification performance evaluation.
+**Target Variable:**
+- `yes` – Customer subscribed to a term deposit.
+- `no` – Customer did not subscribe to a term deposit.
 
 ## 🛠️ Technologies Used
 
-| Technology | Purpose |
-|---|---|
-| Python | Programming Language |
-| Pandas | Data Manipulation |
-| NumPy | Numerical Computation |
-| Scikit-learn | Machine Learning |
-| Matplotlib | Data Visualization |
-| Seaborn | Statistical Visualization |
-| Jupyter Notebook / VS Code | Development Environment |
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
-## 📊 Model Evaluation
+## ⚙️ Project Workflow
 
-Classification models can be evaluated using the following performance metrics:
+1. **Data Collection:** Download and extract the Bank Marketing Dataset.
+2. **Data Exploration:** Analyze dataset structure, columns, and missing values.
+3. **Data Preprocessing:** Apply One-Hot Encoding to categorical features.
+4. **Target Encoding:** Convert target labels into numerical values.
+5. **Train-Test Split:** Divide the dataset into 80% training and 20% testing data.
+6. **Model Building:** Implement a Decision Tree Classifier using the Gini criterion.
+7. **Model Training:** Train the classifier using the training dataset.
+8. **Prediction:** Predict customer subscription outcomes.
+9. **Model Evaluation:** Evaluate performance using accuracy, classification report, and confusion matrix.
+10. **Visualization:** Display feature importance and decision tree structure.
+
+## 🤖 Machine Learning Algorithm
+
+**Decision Tree Classifier**
+
+The model uses:
+- Criterion: Gini
+- Maximum Depth: 5
+- Random State: 42
+
+The Decision Tree algorithm makes predictions by splitting the dataset into smaller subsets based on feature values.
+
+## 📈 Model Evaluation
+
+The model evaluates its predictions using:
 
 - Accuracy Score
 - Precision
@@ -92,84 +69,74 @@ Classification models can be evaluated using the following performance metrics:
 - F1-Score
 - Confusion Matrix
 
-These metrics help evaluate how effectively the model classifies observations.
+Additional visualizations include:
+- Confusion Matrix Heatmap
+- Top 15 Feature Importance Chart
+- Decision Tree Visualization
 
-Actual performance values should be added after running the model.
+## 🔍 New Customer Prediction
 
-## 📂 Project Structure
+The project also demonstrates prediction for a new customer using sample demographic, financial, and campaign-related information.
 
-```text
-SCT_DS_3/
-│
-└── Task 3 Decision tree classifier/
-    │
-    └── decision tree classifier.html
-│
-└── README.md
-```
+The model provides:
+- Customer subscription prediction.
+- Probability of subscription.
+- Probability of non-subscription.
 
-## 🚀 Installation and Setup
+## 🚀 Installation & Execution
 
-### Step 1: Clone the Repository
+**1. Clone the repository**
 
 ```bash
-git clone https://github.com/armaansingh2005/SCT_DS_3.git
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-### Step 2: Navigate to the Project Directory
+**2. Navigate to the project directory**
 
 ```bash
-cd SCT_DS_3
+cd YOUR_PROJECT_FOLDER
 ```
 
-### Step 3: Open the Project
+**3. Install required libraries**
 
-Open the `Task 3 Decision tree classifier` folder in Visual Studio Code.
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
 
-### Step 4: Run the Application
+**4. Run the Python file**
 
-Open `decision tree classifier.html` in your web browser.
+```bash
+python "decision tree.py"
+```
 
-If the HTML file contains an interactive interface, use its available controls to explore the project.
+The dataset is downloaded automatically from the UCI Machine Learning Repository when the script runs.
 
-**Note:** The execution instructions may need adjustment depending on whether the HTML file contains a standalone visualization or an interface connected to a machine learning backend.
+## 💡 Key Learning Outcomes
 
-## 📚 Learning Outcomes
+- Understanding Decision Tree Classification.
+- Working with real-world datasets.
+- Performing categorical data encoding.
+- Training and testing machine learning models.
+- Evaluating classification performance.
+- Understanding feature importance.
+- Visualizing machine learning models.
+- Making predictions for new customer data.
 
-Through this project, I gained knowledge of:
+## 🔮 Future Improvements
 
-- Supervised Machine Learning.
-- Decision Tree classification.
-- Data preprocessing techniques.
-- Feature selection.
-- Information Gain and Entropy.
-- Gini Impurity.
-- Classification model evaluation.
-- Predictive analytics.
-
-## 🔮 Future Enhancements
-
-- Implement Random Forest classification.
-- Compare multiple classification algorithms.
-- Improve model performance through hyperparameter tuning.
-- Add interactive prediction functionality.
-- Implement decision tree visualization.
-- Develop a web-based prediction dashboard.
-- Add advanced model evaluation reports.
+- Compare Decision Tree with Random Forest, SVM, and Logistic Regression.
+- Perform hyperparameter tuning.
+- Improve model performance through feature engineering.
+- Develop an interactive web-based prediction dashboard.
+- Deploy the model using Flask or Streamlit.
 
 ## 👨‍💻 Author
 
 **Armaan Singh**
 
-B.Tech – Artificial Intelligence & Machine Learning
-
+B.Tech – Artificial Intelligence & Machine Learning  
 Dronacharya College of Engineering, Gurugram
-
-- GitHub: https://github.com/armaansingh2005
-- LinkedIn: https://www.linkedin.com/in/armaan-singh-511a78323/
 
 ---
 
-⭐ If you find this project useful, consider giving the repository a star!
-
-**Developed as part of the SkillCraft Technology Data Science Internship.**
+⭐ If you find this project useful, consider giving this repository a star!
